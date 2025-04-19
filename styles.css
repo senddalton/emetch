@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+#encabezado {
+    background-color: #3498db;
+    color: #fff;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.nombre-empresa {
+    font-size: 24px;
+}
+
+.imagotipo img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Servicios */
+#servicios {
+    padding: 5vh 0;
+}
+
+.carrusel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicio {
+    background-color: #fff;
+    padding: 2vh 2vw;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2vh 2vw;
+    width: 20vw;
+}
+
+.servicio img {
+    width: 100%;
+    height: 15vh;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.servicio h3 {
+    margin-top: 2vh;
+}
+
+/* Opiniones */
+#opiniones {
+    padding: 5vh 0;
+}
+
+.caja-opiniones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.opinion {
+    background-color: #fff;
+    padding: 2vh 2vw;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2vh 2vw;
+    width: 20vw;
+}
+
+/* Acerca de */
+#acerca-de {
+    padding: 5vh 0;
+}
+
+.caja-texto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caja-texto img {
+    width: 20vw;
+    height: 20vh;
+    object-fit: cover;
+    margin: 2vh 2vw;
+}
+
+/* Pie de página */
+#pie-de-pagina {
+    background-color: #f1c40f;
+    color: #fff;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+#pie-de-pagina ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pie-de-pagina li {
+    display: inline-block;
+    margin-right: 2vw;
+}
+
+#pie-de-pagina a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* RESPONSIVO: Celulares */
+@media (max-width: 768px) {
+    #encabezado {
+        flex-direction: column;
+        height: auto;
+        padding: 2vh 0;
+        text-align: center;
+    }
+
+    .servicio,
+    .opinion {
+        width: 80vw;
+    }
+
+    .caja-texto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja-texto img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .imagotipo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nombre-empresa {
+        font-size: 20px;
+    }
+
+    #pie-de-pagina li {
+        margin: 1vh 2vw;
+    }
+}
+
+/* RESPONSIVO: Pantallas grandes (escritorios grandes, 4K) */
+@media (min-width: 1200px) {
+    .servicio,
+    .opinion {
+        width: 15vw;
+    }
+
+    .caja-texto img {
+        width: 15vw;
+        height: 25vh;
+    }
+
+    .nombre-empresa {
+        font-size: 32px;
+    }
+
+    .imagotipo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #encabezado {
+        padding: 0 10vw;
+    }
+
+    .servicio h3 {
+        font-size: 20px;
+    }
+}
