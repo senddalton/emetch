@@ -223,31 +223,6 @@ header h1 {
     outline: none;
 }
 
-/* Mapa */
-.map-container {
-    padding: 0 5vw 5vh;
-    background-color: #ffffff;
-}
-
-.map-container h2 {
-    text-align: center;
-    margin-bottom: 3vh;
-    font-size: clamp(1.3rem, 2.5vw, 2rem);
-    color: #1a1a1a;
-    text-transform: uppercase;
-}
-
-.map {
-    width: 90vw;
-    max-width: 800px;
-    height: 50vh;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #1a1a1a;
-}
-
 /* Footer */
 footer {
     background-color: #1a1a1a;
