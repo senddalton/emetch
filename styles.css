@@ -425,81 +425,142 @@ footer p {
   margin-top: 1rem;
 }
 
-/* Estilos para la sección FAQ */
+/* 📌 Estilos Base de la Sección */
 .seccion-faq {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   max-width: 800px;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
+  text-align: center;
 }
 
 .seccion-faq h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
 }
 
+.seccion-faq h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #3498db;
+}
+
+/* 📌 Contenedor de Preguntas */
 .contenedor-faq {
-  border-radius: 10px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
 
+/* 📌 Items de Pregunta - Efecto Flip */
 .faq-item {
-  margin-bottom: 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d; /* Crucial para el efecto flip */
+  perspective: 1000px; /* Profundidad 3D */
+  border-left: 4px solid #3498db;
 }
 
+/* 📌 Encabezado de Pregunta */
 .faq-pregunta {
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem;
-  background-color: #f5f5f5;
   cursor: pointer;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
   transition: background 0.3s;
 }
 
 .faq-pregunta:hover {
-  background-color: #eee;
+  background: linear-gradient(to right, #e9ecef, #ffffff);
 }
 
 .faq-pregunta h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #222;
+  color: #2c3e50;
+  text-align: left;
 }
 
 .faq-toggle {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #3498db;
+  transition: transform 0.3s;
 }
 
+/* 📌 Respuesta */
 .faq-respuesta {
-  padding: 0 1.2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  background-color: white;
+  padding: 0 1.5rem;
+  background: #ffffff;
+  transition: 
+    max-height 0.5s ease,
+    padding 0.3s ease;
 }
 
 .faq-respuesta p {
-  padding: 1rem 0;
   margin: 0;
+  padding: 1.2rem 0;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: left;
 }
 
-/* Clase activa para respuestas visibles */
-.faq-item.active .faq-respuesta {
-  max-height: 200px; /* Ajusta según el contenido */
-  padding: 0 1.2rem 1.2rem;
+/* 📌 Estado Activo (Cuando se expande) */
+.faq-item.active {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .faq-item.active .faq-toggle {
   transform: rotate(45deg);
+  color: #e74c3c;
+}
+
+.faq-item.active .faq-respuesta {
+  max-height: 300px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+  .seccion-faq {
+    padding: 2rem 0.5rem;
+  }
+  
+  .faq-pregunta {
+    padding: 1rem;
+  }
+  
+  .faq-pregunta h3 {
+    font-size: 1rem;
+  }
+}
+
+/* 🌀 Efecto Flip Personalizado (Para AOS) */
+[data-aos="flip-up"] {
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="flip-up"].aos-animate {
+  transform: rotateX(0);
+  opacity: 1;
 }
 
 
