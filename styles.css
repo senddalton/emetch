@@ -273,7 +273,7 @@ footer h2 {
 }
 
 .social-links a {
-    color: #d4af37;
+    color: #7900ac;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     text-decoration: none;
     transition: color 0.3s;
@@ -310,7 +310,7 @@ footer p {
     position: relative;
     width: 90vw;
     /* max-width: 800px; */
-    height: 160vh;
+    height: 90vh;
     /* max-height: 1422px; */
     margin: 0 auto;
     overflow: hidden;
@@ -361,7 +361,7 @@ footer p {
 }
 
 .gallery-controls button:hover {
-    background-color: #d4af37;
+    background-color: #7900ac;
     color: #1a1a1a;
 }
 
