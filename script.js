@@ -3,7 +3,7 @@ function reservar() {
 }
 
 // Función para manejar carruseles de manera genérica
-function setupCarousel(carouselId, prevBtnId, nextBtnId, autoScrollDelay = 4000) {
+function setupCarousel(carouselId, prevBtnId, nextBtnId, autoScrollDelay = 8000) {
     const carousel = document.getElementById(carouselId);
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
@@ -116,7 +116,7 @@ function setupGallerySlider() {
     }
 
     function startInterval() {
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 8000);
     }
 
     function resetInterval() {
