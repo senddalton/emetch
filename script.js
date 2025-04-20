@@ -1,5 +1,5 @@
-function reservar() {
-    window.location.href = "https://senddalton.ddns.net/sites/one_porcent";
+function contacto() {
+    window.open('https://wa.me/+52XXXXXXXXXX?text=Hola,%20me%20gustaría%20contactarlos', '_blank');
 }
 
 // Función para manejar carruseles de manera genérica
