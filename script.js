@@ -242,6 +242,15 @@ function setupFAQ() {
     });
 }
 
+document.querySelectorAll('.faq-item').forEach(item => {
+  const pregunta = item.querySelector('.faq-pregunta');
+  pregunta.addEventListener('click', () => {
+    item.classList.toggle('active');
+    const toggle = pregunta.querySelector('.faq-toggle');
+    toggle.textContent = item.classList.contains('active') ? '−' : '+';
+  });
+});
+
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     // Configurar componentes
