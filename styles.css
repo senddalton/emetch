@@ -207,8 +207,8 @@ header h1 {
     background-color: #1a1a1a;
     color: #d4af37;
     border: 2px solid #d4af37;
-    padding: 1.5vh 5vw;
-    border-radius: 30px;
+    padding: 3vh 15vw;
+    border-radius: 40px;
     cursor: pointer;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     transition: all 0.3s;
