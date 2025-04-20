@@ -1,5 +1,5 @@
 function contacto() {
-    window.open('https://wa.me/+52XXXXXXXXXX?text=Hola,%20me%20gustaría%20contactarlos', '_blank');
+    window.open('https://wa.me/+5216183274838?text=Hola,%20me%20gustaría%20contactarlos', '_blank');
 }
 
 // Función para manejar carruseles de manera genérica
