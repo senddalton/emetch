@@ -372,6 +372,60 @@ footer p {
 }
 
 
+/* Estilos para la sección de opiniones */
+.opiniones-producto {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.opiniones-producto h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contenedor-opiniones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.opinion {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.opinion:hover {
+  transform: translateY(-5px);
+}
+
+.estrellas {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-opinion {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+}
+
+.autor-opinion {
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
+}
+
+
 /* Transiciones al hacer scroll */
 section, .map-container, .prices, .gallery-section {
     opacity: 0;
