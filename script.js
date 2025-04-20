@@ -182,6 +182,28 @@ function setupScrollAnimations() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const pregunta = item.querySelector('.faq-pregunta');
+    const toggle = item.querySelector('.faq-toggle');
+
+    pregunta.addEventListener('click', () => {
+      // Cierra otras preguntas abiertas
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+
+      // Abre/cierra la pregunta clickeada
+      item.classList.toggle('active');
+      toggle.textContent = item.classList.contains('active') ? '−' : '+';
+    });
+  });
+});
+
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     setupCarousel('carousel', 'prev-btn', 'next-btn');
