@@ -310,7 +310,7 @@ footer p {
     position: relative;
     width: 90vw;
     /* max-width: 800px; */
-    height: 160vh;
+    height: auto;
     /* max-height: 1422px; */
     margin: 0 auto;
     overflow: hidden;
