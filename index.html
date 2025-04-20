@@ -3,77 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Empresa</title>
-    <meta name="description" content="Servicios profesionales de Mi Empresa en distintas áreas. Conoce nuestras soluciones y opiniones de nuestros clientes.">
+    <meta name="description" content="Barbería profesional con los mejores cortes y tratamientos para hombre. Reserva tu cita hoy mismo.">
+    <title>Barba & Estilo - Barbería Premium</title>
+    <link rel="icon" href="logo-barberia.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://kit.fontawesome.com/tu_id_de_fontawesome.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header id="encabezado" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="100">
-        <div class="nombre-empresa">Mi Empresa</div>
-        <div class="imagotipo"><img src="imagotipo.png" alt="Logo de Mi Empresa"></div>
+    <header>
+        <img src="logo-barberia.png" alt="Logo de Barba & Estilo - Barbería Premium" width="150" height="150">
+        <h1>Barba & Estilo</h1>
     </header>
 
-    <section id="servicios" data-aos="fade-up">
-        <h2>Servicios</h2>
-        <div class="carrusel">
-            <div class="servicio">
-                <img src="servicio1.jpg" alt="Descripción del Servicio 1">
-                <h3>Servicio 1</h3>
-                <p>Descripción breve de lo que ofrecemos en el servicio 1.</p>
+    <main>
+        <section class="cards-container" aria-labelledby="servicios-titulo">
+            <h2 id="servicios-titulo">Nuestros Servicios</h2>
+            <div class="cards" id="carousel">
+                <div class="card" tabindex="0">
+                    <img src="corte-pelo.jpg" alt="Corte de pelo profesional" loading="lazy">
+                    <h3>Corte Clásico</h3>
+                    <p>Corte de pelo profesional con tijera y máquina.</p>
+                </div>
+                <div class="card" tabindex="0">
+                    <img src="afeitado.jpg" alt="Afeitado tradicional con navaja" loading="lazy">
+                    <h3>Afeitado Tradicional</h3>
+                    <p>Afeitado con navaja y productos premium.</p>
+                </div>
+                <div class="card" tabindex="0">
+                    <img src="tratamiento-barba.jpg" alt="Tratamiento para barba" loading="lazy">
+                    <h3>Tratamiento de Barba</h3>
+                    <p>Arreglo, diseño y cuidado profesional de barba.</p>
+                </div>
             </div>
-            <div class="servicio">
-                <img src="servicio2.jpg" alt="Descripción del Servicio 2">
-                <h3>Servicio 2</h3>
-                <p>Descripción breve de lo que ofrecemos en el servicio 2.</p>
+            <div class="carousel-controls">
+                <button id="prev-btn" aria-label="Anterior servicio">‹</button>
+                <button id="next-btn" aria-label="Siguiente servicio">›</button>
             </div>
-            <div class="servicio">
-                <img src="servicio3.jpg" alt="Descripción del Servicio 3">
-                <h3>Servicio 3</h3>
-                <p>Descripción breve de lo que ofrecemos en el servicio 3.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="opiniones" data-aos="fade-up">
-        <h2>Opiniones</h2>
-        <div class="caja-opiniones">
-            <div class="opinion">
-                <p>Muy buen servicio, me atendieron con profesionalismo y rapidez.</p>
-                <span>Juan Pérez</span>
-            </div>
-            <div class="opinion">
-                <p>Excelente atención y calidad. Los recomiendo totalmente.</p>
-                <span>Ana García</span>
-            </div>
-        </div>
-    </section>
+        <section class="prices" aria-labelledby="precios-titulo">
+            <h2 id="precios-titulo">Lista de Precios</h2>
+            <ul>
+                <li>Corte de Cabello - $300</li>
+                <li>Afeitado Tradicional - $100</li>
+                <li>Arreglo de Barba - $100</li>
+                <li>Corte + Barba - $100</li>
+                <li>Paquete Completo - $100</li>
+            </ul>
+        </section>
 
-    <section id="acerca-de" data-aos="fade-up">
-        <h2>Acerca de</h2>
-        <div class="caja-texto">
-            <p>Somos una empresa comprometida con ofrecer soluciones eficientes, innovadoras y personalizadas a nuestros clientes.</p>
-            <img src="imagen.jpg" alt="Equipo de trabajo de Mi Empresa">
+        <div class="buttons">
+            <button onclick="reservar()" aria-label="Reservar cita ahora">Reservar</button>
         </div>
-    </section>
 
-    <div class="contacto">
-        <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="boton-whatsapp">Contáctanos por WhatsApp</a>
+<section class="gallery-section" aria-labelledby="galeria-titulo">
+    <h2 id="galeria-titulo">Nuestro Trabajo</h2>
+    <div class="gallery-slider">
+        <div class="gallery-slide">
+            <img src="foto1.jpg" alt="Corte de cabello estilo clásico" loading="lazy">
+        </div>
+        <div class="gallery-slide">
+            <img src="foto2.jpg" alt="Afeitado tradicional con navaja" loading="lazy">
+        </div>
+        <div class="gallery-slide">
+            <img src="foto3.jpg" alt="Arreglo de barba profesional" loading="lazy">
+        </div>
+        <div class="gallery-slide">
+            <img src="foto4.jpg" alt="Corte moderno para hombre" loading="lazy">
+        </div>
+        <div class="gallery-slide">
+            <img src="foto5.jpg" alt="Tratamiento capilar en barbería" loading="lazy">
+        </div>
     </div>
+    <div class="gallery-controls">
+        <button class="gallery-prev" aria-label="Foto anterior">❮</button>
+        <button class="gallery-next" aria-label="Foto siguiente">❯</button>
+    </div>
+    <div class="gallery-dots"></div>
+</section>
 
-    <footer id="pie-de-pagina">
-        <ul>
-            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-        </ul>
+        <section class="map-container" aria-labelledby="ubicacion-titulo">
+            <h2 id="ubicacion-titulo">Encuéntranos aquí</h2>
+            <div class="map">
+                <iframe
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444.65681622292936!2d-105.68120907377784!3d26.927144230434582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694515bf28cec4d%3A0xb6503d89f517ddca!2sR%C3%ADo%20Grijalva%2030A%2C%20San%20Antonio%20de%20Las%20Huertas%2C%2033840%20Hidalgo%20del%20Parral%2C%20Chih.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1744163659580!5m2!1ses-419!2sus"
+
+                    width="100%" 
+                    height="100%"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Mapa de ubicación de Barba & Estilo">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Síguenos en nuestras redes sociales</h2>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook de Barba & Estilo">Facebook</a>
+            <a href="#" aria-label="Instagram de Barba & Estilo">Instagram</a>
+            <a href="#" aria-label="TikTok de Barba & Estilo">TikTok</a>
+        </div>
+        <p>&copy; 2023 Barba & Estilo. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1200 });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
