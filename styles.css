@@ -432,6 +432,7 @@ footer p {
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
   text-align: center;
+  scroll-margin-top: 80px; /* Previene saltos al hacer scroll */
 }
 
 .seccion-faq h2 {
