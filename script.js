@@ -180,39 +180,36 @@ function setupGallerySlider(containerSelector = '.gallery-slider') {
 
 // Animaciones al hacer scroll
 function setupScrollAnimations() {
-    const sections = document.querySelectorAll('section, .map-container, .prices, .gallery-section, .buttons');
+    const sections = document.querySelectorAll('section:not(.opiniones-producto), .map-container, .prices, .gallery-section, .buttons');
+    
     if (sections.length === 0) return;
 
-    const handleIntersection = (entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Detiene el carrusel al llegar a FAQ
+                if (entry.target.classList.contains('seccion-faq')) {
+                    clearAllIntervals();
+                }
             }
         });
-    };
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Reduce este margen
+    });
 
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(handleIntersection, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-        sections.forEach(section => observer.observe(section));
-    } else {
-        // Fallback para navegadores antiguos
-        const checkScroll = () => {
-            const triggerPoint = window.innerHeight * 0.85;
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < triggerPoint) {
-                    section.classList.add('visible');
-                }
-            });
-        };
+    sections.forEach(section => observer.observe(section));
+}
 
-        window.addEventListener('load', checkScroll);
-        window.addEventListener('scroll', checkScroll);
+// Nueva función para limpiar intervalos
+function clearAllIntervals() {
+    const highestIntervalId = setTimeout(() => {}, 0);
+    for (let i = 1; i < highestIntervalId; i++) {
+        clearInterval(i);
     }
 }
+
 
 // Configuración de FAQ
 function setupFAQ() {
@@ -241,15 +238,6 @@ function setupFAQ() {
         });
     });
 }
-
-document.querySelectorAll('.faq-item').forEach(item => {
-  const pregunta = item.querySelector('.faq-pregunta');
-  pregunta.addEventListener('click', () => {
-    item.classList.toggle('active');
-    const toggle = pregunta.querySelector('.faq-toggle');
-    toggle.textContent = item.classList.contains('active') ? '−' : '+';
-  });
-});
 
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
