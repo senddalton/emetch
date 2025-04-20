@@ -60,7 +60,7 @@ header img:hover {
 
 header h1 {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    color: #d4af37;
+    color: #7900ac;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -309,9 +309,9 @@ footer p {
 .gallery-slider {
     position: relative;
     width: 90vw;
-    /* max-width: 800px; */
+    max-width: 800px;
     height: auto;
-    /* max-height: 1422px; */
+    max-height: 1422px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
