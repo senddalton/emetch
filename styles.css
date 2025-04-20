@@ -19,7 +19,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 3px solid #d4af37;
+    border-bottom: 3px solid #7900ac;
 }
 
 /* Animación segura para GitHub Pages */
@@ -309,9 +309,9 @@ footer p {
 .gallery-slider {
     position: relative;
     width: 90vw;
-    max-width: 800px;
+    /* max-width: 800px; */
     height: 160vh;
-    max-height: 1422px;
+    /* max-height: 1422px; */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
