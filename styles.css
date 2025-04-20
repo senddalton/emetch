@@ -425,6 +425,83 @@ footer p {
   margin-top: 1rem;
 }
 
+/* Estilos para la sección FAQ */
+.seccion-faq {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.seccion-faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contenedor-faq {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-pregunta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-pregunta:hover {
+  background-color: #eee;
+}
+
+.faq-pregunta h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-respuesta {
+  padding: 0 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: white;
+}
+
+.faq-respuesta p {
+  padding: 1rem 0;
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Clase activa para respuestas visibles */
+.faq-item.active .faq-respuesta {
+  max-height: 200px; /* Ajusta según el contenido */
+  padding: 0 1.2rem 1.2rem;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
 
 /* Transiciones al hacer scroll */
 section, .map-container, .prices, .gallery-section {
